@@ -6,8 +6,6 @@ import java.util.Date;
 
 public record DetalRequest(
         @NotEmpty
-        Long artikul,
-        @NotEmpty
         String name,
         @NotEmpty
         double price,
