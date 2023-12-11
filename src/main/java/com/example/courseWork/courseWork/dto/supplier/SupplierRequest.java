@@ -9,5 +9,5 @@ public record SupplierRequest(
             @NotNull
             String address,
             @NotNull
-            String PhoneNumber
+            String phoneNumber
     ){}
