@@ -25,7 +25,7 @@ public class Detal {
     private String name;
 
     @Column(name = "price")
-    @NotBlank
+    @NotEmpty
     private double price;
 
     @Column(name = "date_of_setting_price")
