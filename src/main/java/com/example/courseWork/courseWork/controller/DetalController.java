@@ -2,8 +2,6 @@ package com.example.courseWork.courseWork.controller;
 
 import com.example.courseWork.courseWork.dto.detal.DetalRequest;
 import com.example.courseWork.courseWork.dto.detal.DetalResponse;
-import com.example.courseWork.courseWork.dto.supplier.SupplierRequest;
-import com.example.courseWork.courseWork.dto.supplier.SupplierResponse;
 import com.example.courseWork.courseWork.service.DetalService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

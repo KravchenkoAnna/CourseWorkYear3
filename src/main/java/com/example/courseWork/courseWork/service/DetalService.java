@@ -2,10 +2,7 @@ package com.example.courseWork.courseWork.service;
 
 import com.example.courseWork.courseWork.dto.detal.DetalRequest;
 import com.example.courseWork.courseWork.dto.detal.DetalResponse;
-import com.example.courseWork.courseWork.dto.supplier.SupplierRequest;
-import com.example.courseWork.courseWork.dto.supplier.SupplierResponse;
 import com.example.courseWork.courseWork.exception.DetalNotFoundException;
-import com.example.courseWork.courseWork.exception.SupplierNotFoundException;
 import com.example.courseWork.courseWork.mapper.DetalMapper;
 import com.example.courseWork.courseWork.repository.DetalRepository;
 import lombok.RequiredArgsConstructor;
@@ -37,6 +34,7 @@ public class DetalService {
                 .orElseThrow(() -> new DetalNotFoundException("id = " + id));
 
         currentDetal.setName(detalRequest.name());
+        currentDetal.setArtikul(detalRequest.artikul());
         currentDetal.setPrice(detalRequest.price());
         currentDetal.setDateOfSettingPrice(detalRequest.dateOfSettingPrice());
 

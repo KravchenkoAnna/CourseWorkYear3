@@ -9,6 +9,8 @@ public record DetalRequest(
         @NotEmpty
         String name,
         @NotEmpty
+        int artikul,
+        @NotEmpty
         double price,
         @NotEmpty
         LocalDate dateOfSettingPrice

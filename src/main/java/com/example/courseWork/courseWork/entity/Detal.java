@@ -25,6 +25,10 @@ public class Detal {
     @NotBlank
     private String name;
 
+    @Column(name = "artikul")
+    @NotNull
+    private int artikul;
+
     @Column(name = "price")
     @NotNull
     private double price;

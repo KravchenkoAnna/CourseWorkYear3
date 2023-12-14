@@ -5,6 +5,7 @@ import java.util.Date;
 
 public record DetalResponse(
         String name,
+        int artikul,
         double price,
         LocalDate dateOfSettingPrice
 ){}
