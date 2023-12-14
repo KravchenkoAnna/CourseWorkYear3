@@ -3,6 +3,7 @@ package com.example.courseWork.courseWork.dto.trade;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public record TradeResponse(
@@ -11,9 +12,9 @@ public record TradeResponse(
         String supplierName,
         @NotEmpty
         String detalName,
-        @NotNull
+        @NotEmpty
         int detalQuantity,
         @NotEmpty
-        Date purchaseDate
+        LocalDate purchaseDate
 ){}
 

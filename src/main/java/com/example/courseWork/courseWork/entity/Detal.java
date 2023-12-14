@@ -2,12 +2,13 @@ package com.example.courseWork.courseWork.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 @Getter
@@ -25,10 +26,10 @@ public class Detal {
     private String name;
 
     @Column(name = "price")
-    @NotEmpty
+    @NotNull
     private double price;
 
     @Column(name = "date_of_setting_price")
-    @NotEmpty
-    private Date dateOfSettingPrice;
+    @NotNull
+    private LocalDate dateOfSettingPrice;
 }

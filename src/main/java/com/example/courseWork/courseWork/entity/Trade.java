@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -33,6 +34,6 @@ public class Trade {
 
     @Column(name = "purchase_date")
     @NotEmpty
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
 
 }

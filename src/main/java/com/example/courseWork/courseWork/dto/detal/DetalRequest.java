@@ -2,6 +2,7 @@ package com.example.courseWork.courseWork.dto.detal;
 
 import jakarta.validation.constraints.NotEmpty;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public record DetalRequest(
@@ -10,5 +11,5 @@ public record DetalRequest(
         @NotEmpty
         double price,
         @NotEmpty
-        Date dateOfSettingPrice
+        LocalDate dateOfSettingPrice
 ){}
