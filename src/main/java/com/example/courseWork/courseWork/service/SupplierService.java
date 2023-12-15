@@ -13,7 +13,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 public class SupplierService {
 
     private final SupplierRepository supplierRepository;
@@ -26,7 +25,7 @@ public class SupplierService {
         var createdSupplier = supplierRepository.save(supplierToCreate);
         return supplierMapper.toSupplierResponse(createdSupplier);
     }
-    @Transactional
+
     public SupplierResponse update(Long id, SupplierRequest supplierRequest){
 
         var currentSupplier = supplierRepository.findById(id)
@@ -36,6 +35,7 @@ public class SupplierService {
         currentSupplier.setAddress(supplierRequest.address());
         currentSupplier.setPhoneNumber(supplierRequest.phoneNumber());
 
+        supplierRepository.save(currentSupplier);
         return supplierMapper.toSupplierResponse(currentSupplier);
     }
 

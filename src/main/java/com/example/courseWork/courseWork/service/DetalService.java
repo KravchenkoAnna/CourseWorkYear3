@@ -13,7 +13,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 public class DetalService {
     private final DetalRepository detalRepository;
     private final DetalMapper detalMapper;
@@ -37,6 +36,8 @@ public class DetalService {
         currentDetal.setArtikul(detalRequest.artikul());
         currentDetal.setPrice(detalRequest.price());
         currentDetal.setDateOfSettingPrice(detalRequest.dateOfSettingPrice());
+
+        detalRepository.save(currentDetal);
 
         return detalMapper.toDetalResponse(currentDetal);
     }

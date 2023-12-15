@@ -4,6 +4,7 @@ import com.example.courseWork.courseWork.dto.supplier.SupplierRequest;
 import com.example.courseWork.courseWork.dto.supplier.SupplierResponse;
 import com.example.courseWork.courseWork.service.SupplierService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,6 +25,7 @@ public class SupplierController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public SupplierResponse create(@RequestBody SupplierRequest supplierRequest){
         return supplierService.create(supplierRequest);
     }
@@ -33,7 +35,7 @@ public class SupplierController {
         return supplierService.update(id, supplierRequest);
     }
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable("id") Long id) {
         supplierService.delete(id);
     }
 }

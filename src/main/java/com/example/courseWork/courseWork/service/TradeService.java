@@ -21,7 +21,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 public class TradeService {
     private final TradeRepository tradeRepository;
     private final TradeMapper tradeMapper;
@@ -56,6 +55,7 @@ public class TradeService {
         trade.setDetalQuantity(tradeRequest.detalQuantity());
         trade.setPurchaseDate(tradeRequest.purchaseDate());
 
+        tradeRepository.save(trade);
         return tradeMapper.toTradeResponse(trade);
     }
     @Transactional

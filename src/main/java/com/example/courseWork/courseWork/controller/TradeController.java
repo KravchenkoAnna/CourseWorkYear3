@@ -5,6 +5,7 @@ import com.example.courseWork.courseWork.dto.trade.TradeRequest;
 import com.example.courseWork.courseWork.dto.trade.TradeResponse;
 import com.example.courseWork.courseWork.service.TradeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,6 +33,7 @@ public class TradeController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public TradeResponse create(@RequestBody TradeRequest tradeRequest){
         return tradeService.create(tradeRequest);
     }

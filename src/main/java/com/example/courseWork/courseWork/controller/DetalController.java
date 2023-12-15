@@ -4,6 +4,7 @@ import com.example.courseWork.courseWork.dto.detal.DetalRequest;
 import com.example.courseWork.courseWork.dto.detal.DetalResponse;
 import com.example.courseWork.courseWork.service.DetalService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +28,7 @@ public class DetalController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public DetalResponse create(@RequestBody DetalRequest detalRequest){
         return detalService.create(detalRequest);
     }
@@ -36,7 +38,7 @@ public class DetalController {
         return detalService.update(id, detalRequest);
     }
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable("id") Long id) {
         detalService.delete(id);
     }
 
