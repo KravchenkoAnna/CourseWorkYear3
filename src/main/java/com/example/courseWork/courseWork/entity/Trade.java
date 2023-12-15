@@ -33,7 +33,7 @@ public class Trade {
     private int detalQuantity;
 
     @Column(name = "purchase_date")
-    @NotEmpty
+
     private LocalDate purchaseDate;
 
 }

@@ -22,18 +22,14 @@ public class Detal {
     private Long id;
 
     @Column(name = "name")
-    @NotBlank
     private String name;
 
     @Column(name = "artikul")
-    @NotNull
     private int artikul;
 
     @Column(name = "price")
-    @NotNull
     private double price;
 
     @Column(name = "date_of_setting_price")
-    @NotNull
     private LocalDate dateOfSettingPrice;
 }

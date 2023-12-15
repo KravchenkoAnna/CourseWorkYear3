@@ -27,7 +27,7 @@ public class TradeController {
     }
 
     @PutMapping("/{id}")
-    public TradeResponse update(@PathVariable Long id, @RequestBody TradeRequest tradeRequest){
+    public TradeResponse update(@PathVariable("id") Long id, @RequestBody TradeRequest tradeRequest){
         return tradeService.update(id, tradeRequest);
     }
 

@@ -18,7 +18,7 @@ public class Supplier {
     private Long id;
 
     @Column(name = "name",unique = true)
-    @NotBlank
+
     private String name;
     @Column(name = "address")
     private String address;

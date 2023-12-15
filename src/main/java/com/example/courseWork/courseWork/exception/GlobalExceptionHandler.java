@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(DataIntegrityViolationException.class)
-    public String handleEntitiesDataIntegrityException() {
-        return "Duplicate";
-    }
-
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(IllegalArgumentException.class)
-    public String handleIllegalArgumentException(IllegalArgumentException e) {
-        log.error(e.getMessage());
-        return e.getMessage();
-    }
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ExceptionHandler(DataIntegrityViolationException.class)
+//    public String handleEntitiesDataIntegrityException() {
+//        return "Duplicate";
+//    }
+//
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ExceptionHandler(IllegalArgumentException.class)
+//    public String handleIllegalArgumentException(IllegalArgumentException e) {
+//        log.error(e.getMessage());
+//        return e.getMessage();
+//    }
 }

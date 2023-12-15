@@ -8,13 +8,11 @@ import java.util.Date;
 
 public record TradeResponse(
         Long id,
-        @NotEmpty
         String supplierName,
-        @NotEmpty
         String detalName,
-        @NotEmpty
+
         int detalQuantity,
-        @NotEmpty
+
         LocalDate purchaseDate
 ){}
 

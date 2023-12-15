@@ -32,7 +32,7 @@ public class DetalController {
     }
 
     @PutMapping("/{id}")
-    public DetalResponse update(@PathVariable Long id, @RequestBody DetalRequest detalRequest){
+    public DetalResponse update(@PathVariable("id") Long id, @RequestBody DetalRequest detalRequest){
         return detalService.update(id, detalRequest);
     }
     @DeleteMapping("/{id}")

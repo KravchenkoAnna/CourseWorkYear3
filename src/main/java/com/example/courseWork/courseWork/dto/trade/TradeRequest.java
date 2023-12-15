@@ -14,7 +14,7 @@ public record TradeRequest(
         String detalName,
         @NotNull
         int detalQuantity,
-        @NotEmpty
+
         LocalDate purchaseDate
 
 ){
